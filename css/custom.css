@@ -660,3 +660,50 @@ header:not(.nav-fixed) #nav #hotkey #top-button {
 
 
 
+/*-------*/
+#nav #hotkey #top-button #site-page a.totopbtn{
+    font-size: 1.3rem;
+    padding: 0 !important;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    display: flex;
+
+    opacity: 1;
+    width: 25px;
+    height: 25px;
+    border-radius: 40px;
+    background: #363636;
+    color: var(--anzhiyu-card-bg);
+
+    right: 5px;
+    transition: 0.3s;
+}
+
+
+a.totopbtn i {
+    position: absolute;
+    display: flex;
+    font-size: 0.8rem;
+    opacity: 0;
+}
+
+#nav #hotkey #top-button #site-page {
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+    padding: 0 !important;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%)
+}

@@ -681,7 +681,7 @@ header:not(.nav-fixed) #nav #hotkey #top-button {
     background: #363636;
     color: var(--anzhiyu-card-bg);
 
-    right: 5px;
+    right: 0;
     transition: 0.3s;
 }
 
@@ -706,4 +706,11 @@ a.totopbtn i {
     -o-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%)
+}
+
+
+
+
+#nav #hotkey #top-button #site-page:hover a.totopbtn {
+    background: var(--anzhiyu-main);
 }

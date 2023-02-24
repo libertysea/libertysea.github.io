@@ -1,3 +1,5 @@
+/*导航栏*/
+
 /* 颜色 */
 :root {
     --anzhiyu-theme-op: #4259ef23;
@@ -638,14 +640,15 @@ header:not(.nav-fixed) #nav #hotkey #top-button {
 }
 
 #nav #hotkey #top-button i::before {
-    content: attr(data-percent);
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     font-size: 90%;
     line-height: 1.7em;
     white-space: nowrap;
-    font-family: Jay
+
+    width: 25px;
+    height: 25px;
 }
 
 #nav #hotkey #top-button:hover i::before {
@@ -713,4 +716,53 @@ a.totopbtn i {
 
 #nav #hotkey #top-button #site-page:hover a.totopbtn {
     background: var(--anzhiyu-main);
+    width:30px;
+    height:30px;
 }
+/*#nav #hotkey #top-button #site-page:not(.long):hover a.totopbtn {*/
+/*    width: 35px;*/
+/*    height: 35px;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*}*/
+
+
+a.totopbtn i {
+    position: absolute;
+    display: flex;
+    font-size: 0.8rem;
+    opacity: 0;
+}
+
+a.totopbtn:hover i {
+    position: absolute;
+    display: flex;
+    font-size: 0.8rem;
+    left: 2.5px;
+    top: 4px;
+    bottom: 1px;
+    width: 25px;
+    height: 25px;
+    opacity: 1;
+    color: var(--anzhiyu-white);
+    transition: 0.3s;
+}
+a.totopbtn span{
+    opacity: 1;
+}
+a.totopbtn:hover span{
+    opacity: 0;
+}
+
+
+/*a.totopbtn i {*/
+/*    position: absolute;*/
+/*    display: flex;*/
+/*    font-size: 0.8rem;*/
+/*    opacity: 0;*/
+/*    left: 5px;*/
+/*    top: 5px;*/
+/*    bottom: 1px;*/
+/*    width: 25px;*/
+/*    height: 25px;*/
+/*}*/

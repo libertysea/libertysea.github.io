@@ -1,3 +1,5 @@
+// FPS
+
 // let Jay_showFPS = !1;
 // "true" === localStorage.getItem("showFPS") ?
 //     ((Jay_showFPS = !0),

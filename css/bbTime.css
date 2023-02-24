@@ -1,0 +1,163 @@
+/* 主页哔哔bb */
+#bber-talk {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+#bbtalk {
+    overflow: hidden;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#bber-talk .li-style {
+    width: auto;
+    max-width: 100%;
+    height: 25px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 0.3s;
+    font-weight: bold;
+    margin: auto;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#bbTimeList .li-style:hover {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+ul,
+li {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#bbTimeList {
+    background: var(--anzhiyu-none);
+    color: var(--anzhiyu-fontcolor);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    box-shadow: var(--anzhiyu-shadow-lightblack);
+    display: flex;
+    transition: 0.3s;
+    margin-bottom: 1rem;
+    border: var(--style-border);
+    align-items: center;
+    height: 50px;
+}
+
+#bbTimeList:hover {
+    border: var(--style-border-hover);
+    box-shadow: var(--anzhiyu-shadow-main);
+}
+
+@media screen and (min-width: 1300px) {
+    #bbTimeList {
+        margin-bottom: 1rem;
+    }
+}
+
+/* 哔哔前往 */
+.bber-gotobb {
+    line-height: 25px;
+    margin-left: 1rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.bber-gotobb:hover {
+    opacity: 0.8;
+    color: var(--anzhiyu-theme);
+}
+
+/* 哔哔标志 */
+.icon-bblogo {
+    font-size: 2rem;
+    font-size: 2rem;
+    line-height: 22px;
+    margin-right: 1rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.icon-bblogo:hover {
+    opacity: 0.8;
+    color: var(--anzhiyu-theme);
+}
+
+
+
+#bbTimeList {
+    background: var(--anzhiyu-white);
+    color: var(--anzhiyu-fontcolor);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    box-shadow: var(--anzhiyu-shadow-lightblack);
+    display: flex;
+    transition: all 0.3s ease 0s;
+    margin: 1rem auto 0;
+    border: var(--style-border);
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+[data-theme="dark"] #bbTimeList {
+    background: #000 !important;
+}
+#bbtalk {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#bber-talk {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.bber-logo {
+    font-size: 1.5rem;
+    line-height: 22px;
+    margin-right: 1rem;
+    transition: all 0.3s ease 0s;
+    cursor: url(/img/x2.cur), auto !important;
+}
+
+.bber-gotobb {
+    line-height: 25px;
+    margin-left: 1rem;
+    transition: all 0.3s ease 0s;
+    cursor: url(/img/x2.cur), auto !important;
+}
+
+#bber-talk .li-style {
+    width: 100%;
+    max-width: 100%;
+    height: 25px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 0.3s;
+    font-weight: 700;
+    margin: auto;
+    cursor: url(/img/x2.cur), auto !important;
+    white-space: nowrap;
+}
+
+#bbTimeList:hover {
+    border: var(--style-border-hover);
+    box-shadow: var(--anzhiyu-shadow-main);
+}
+

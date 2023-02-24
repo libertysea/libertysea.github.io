@@ -4971,7 +4971,7 @@
 }
 
 .fa-arrow-up:before {
-    content: "\f062"
+    content: "\f062"!important;
 }
 
 .fa-television:before,.fa-tv-alt:before,.fa-tv:before {

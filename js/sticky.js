@@ -5,7 +5,7 @@ var mySwiper = new Swiper('#stickyList', {
     effect : 'fade',
     loopPreventsSlide: false,
     autoplay: {
-        delay: 20000,
+        delay: 3000,
     },
     mousewheel: false,
     pagination: {

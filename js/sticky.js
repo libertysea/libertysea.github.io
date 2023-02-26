@@ -1,4 +1,4 @@
-var mySwiper = new Swiper('#stickyList', {
+let mySwiper = new Swiper('.swiper-container2', {
     direction: 'horizontal',
     speed: 600,
     loop: true,

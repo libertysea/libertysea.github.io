@@ -132,7 +132,7 @@ var anzhiyu = {
     },
     initIndexEssay: function () {
         setTimeout(() => {
-            let essay_bar_swiper = new Swiper(".essay_bar_swiper_container", {
+            let essay_bar_swiper = new Swiper(".swiper-container1", {
                 passiveListeners: true,
                 direction: "vertical",
                 loop: true,
@@ -143,7 +143,7 @@ var anzhiyu = {
                 mousewheel: true,
             });
 
-            let essay_bar_comtainer = document.getElementById("bbtalk");
+            let essay_bar_comtainer = document.getElementById("#bber-talk");
             if (essay_bar_comtainer !== null) {
                 essay_bar_comtainer.onmouseenter = function () {
                     essay_bar_swiper.autoplay.stop();
@@ -159,3 +159,5 @@ var anzhiyu = {
 anzhiyu.initIndexEssay();
 anzhiyu.changeTimeInEssay();
 anzhiyu.reflashEssayWaterFall();
+
+

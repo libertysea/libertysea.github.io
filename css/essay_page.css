@@ -120,7 +120,7 @@
 #bber > section > ul > li > div .bber-info-from {
     color: var(--anzhiyu-fontcolor);
     font-size: 0.7rem;
-    background-color: var(--anzhiyu-gray-op);
+    background-color: var(--anzhiyu-gray);
     padding: 0px 8px;
     border-radius: 20px;
     cursor: default;
@@ -142,11 +142,6 @@
     width: 100%;
     margin-top: 10px;
 }
-
-#bber .bber-bottom .bber-reply {
-    cursor: url(/img/x2.cur), auto !important;
-}
-
 #bber .timeline ul li.bber-item:hover {
     border: var(--style-border-hover);
 }
@@ -231,17 +226,154 @@
     position: initial;
 }
 
-/* 顶部样式 */
+/* 即刻短文 */
 .author-content.author-content-item.essayPage {
     height: 19rem;
-    background: url(https://img02.anzhiy.cn/adminuploads/1/2022/08/21/630249e2df20f.jpg) left 28% / cover no-repeat;
+    background: url(https://photoimage.2lc.top/LightPicture/2023/02/e75f74c4de3049b4.webp) no-repeat center;
+    background-size: cover;
     color: var(--anzhiyu-white);
     overflow: hidden;
-    margin-top: 0px;
+    margin-top: 0;
 }
-#page:has(#essay_page) .author-content-item .card-content .banner-button-group .banner-button:hover {
+/* 一行内容，横向组件 */
+
+.author-content-item {
+    width: 49%;
+    border-radius: 24px;
+    background: var(--anzhiyu-card-bg);
+    border: var(--style-border-always);
+    box-shadow: var(--anzhiyu-shadow-border);
+    position: relative;
+    padding: 1rem 2rem;
+    overflow: hidden;
+}
+
+.author-content-item.single {
+    width: 100%;
+}
+
+.author-content-item .author-content-item-title {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.author-content-item .author-content-item-tips {
+    opacity: 0.8;
+    font-size: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .author-content-item {
+        width: 100% !important;
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+
+    .author-content-item-group.column {
+        width: 100% !important;
+    }
+
+    .author-content {
+        margin-top: 0rem;
+    }
+}
+
+.card-background-icon {
+    font-size: 12rem;
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+    bottom: -40%;
+    transform: rotate(30deg);
+    transition: 2s ease-in-out;
+}
+
+.author-content-item:hover .card-background-icon {
+    transform: rotate(20deg);
+}
+.author-content-item .content-bottom {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.author-content-item .card-content .banner-button-group .banner-button {
+    height: 40px;
+    width: 124px;
+    border-radius: 20px;
+    justify-content: center;
+    background: var(--anzhiyu-black);
     color: var(--anzhiyu-white);
-    border-radius: 20px !important;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    transition: .3s;
+    cursor: pointer;
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transform: translateZ(0);
+}
+
+.author-content-item .card-content .banner-button-group .banner-button:hover {
+    background: var(--anzhiyu-main);
+    color: var(--anzhiyu-white);
+}
+
+.author-content-item .card-content .banner-button-group .banner-button i {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .author-content-item .card-content .banner-button-group {
+        right: 1rem;
+        bottom: 1rem;
+    }
+
+    .author-content-item .card-content .banner-button-group .banner-button {
+        background: none;
+        color: var(--anzhiyu-white);
+        padding: 0;
+        width: fit-content;
+    }
+
+    .author-content-item .card-content .banner-button-group .banner-button i {
+        margin-right: 0;
+        font-size: 1.5rem;
+    }
+
+    .author-content-item .card-content .banner-button-group .banner-button-text {
+        display: none;
+    }
+}
+
+.author-content-item.like-music::after {
+    box-shadow: 0 -69px 203px 11px #736896 inset;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.author-content-item .card-content .author-content-item-title {
+    margin-bottom: 0.5rem;
+}
+
+.author-content-item .card-content .banner-button-group {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+}
+
+.author-content-item .content-bottom {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* 响应式 */

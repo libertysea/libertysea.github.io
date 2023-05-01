@@ -4,6 +4,22 @@
     content: "貔貅天气";
 }
 
+@media screen and (max-width: 1400px) {
+    #he-plugin-simple {
+        left: 140px !important;
+        opacity: 1;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    #he-plugin-simple {
+        opacity: 0;
+    }
+}
+#he-plugin-simple {
+    top: 9.4px !important;
+}
 /*#web_bg {*/
 /*    background: -webkit-linear-gradient(*/
 /*            0deg,*/
@@ -140,6 +156,12 @@
 #web_bg {
     background: linear-gradient(90deg,rgba(247,149,51,.1),rgba(243,112,85,.1) 15%,rgba(239,78,123,.1) 30%,rgba(161,102,171,.1) 44%,rgba(80,115,184,.1) 58%,rgba(16,152,173,.1) 72%,rgba(7,179,155,.1) 86%,rgba(109,186,130,.1))
 }
+
+/*!*页脚美化*!*/
+/*#footer-wrap {*/
+/*    text-align: left;*/
+/*    !*background-color: #203e57;*!*/
+/*}*/
 
 /*::-webkit-scrollbar {*/
 /*    height: 4px;*/

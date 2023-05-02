@@ -20,6 +20,24 @@
 #he-plugin-simple {
     top: 9.4px !important;
 }
+
+/*@media screen and (max-width: 1125px) {*/
+/*    #aside-content .card-info .card-info-avatar .author-status-box {*/
+/*        left: 10px;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (max-width: 1025px) {*/
+/*    #aside-content .card-info .card-info-avatar .author-status-box {*/
+/*        left: 14px;*/
+/*    }*/
+/*}*/
+#aside-content .card-info .card-info-avatar .author-status-box {
+    left: 0;
+    top: 51px;
+}
+
+
 /*#web_bg {*/
 /*    background: -webkit-linear-gradient(*/
 /*            0deg,*/

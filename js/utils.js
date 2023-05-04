@@ -524,7 +524,7 @@ const anzhiyu = {
   },
   //友链随机传送
   travelling() {
-    var fetchUrl = "https://friends.anzhiy.cn/randomfriend";
+    var fetchUrl = "https://moments.wpixiu.cn/randomfriend";
     fetch(fetchUrl)
       .then(res => res.json())
       .then(json => {

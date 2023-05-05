@@ -205,3 +205,13 @@
 /*    background-color: #49b1f5;*/
 /*    color: #fff*/
 /*}*/
+body[data-type="toolbox"] main #page {
+    border: 0;
+    box-shadow: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+[data-theme="dark"] body[data-type="toolbox"] #page {
+    background: transparent;
+}

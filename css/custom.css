@@ -4,13 +4,13 @@
     content: "貔貅天气";
 }
 
-@media screen and (max-width: 1400px) {
-    #he-plugin-simple {
-        left: 140px !important;
-        opacity: 1;
-        display: block;
-    }
-}
+/*@media screen and (max-width: 1400px) {*/
+/*    #he-plugin-simple {*/
+/*        left: 140px !important;*/
+/*        opacity: 1;*/
+/*        display: block;*/
+/*    }*/
+/*}*/
 
 @media screen and (max-width: 860px) {
     #he-plugin-simple {
@@ -32,10 +32,10 @@
         left: 14px;
     }
 }
-/*#aside-content .card-info .card-info-avatar .author-status-box {*/
-/*    left: 0;*/
-/*    top: 51px;*/
-/*}*/
+#aside-content .card-info .card-info-avatar .author-status-box {
+    left: 0;
+    top: 51px;
+}
 
 
 /*#web_bg {*/

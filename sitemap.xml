@@ -200,13 +200,6 @@
 
   
   <url>
-    <loc>https://blog.wpixiu.cn/tags/Hexo/</loc>
-    <lastmod>2023-05-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.wpixiu.cn/tags/%E8%81%9A%E5%90%88%E6%90%9C%E7%B4%A2/</loc>
     <lastmod>2023-05-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -214,14 +207,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wpixiu.cn/tags/twikoo/</loc>
-    <lastmod>2023-05-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.wpixiu.cn/tags/Docker/</loc>
+    <loc>https://blog.wpixiu.cn/tags/Hexo/</loc>
     <lastmod>2023-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -264,6 +250,20 @@
   
   <url>
     <loc>https://blog.wpixiu.cn/tags/%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2023-05-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.wpixiu.cn/tags/twikoo/</loc>
+    <lastmod>2023-05-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.wpixiu.cn/tags/Docker/</loc>
     <lastmod>2023-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

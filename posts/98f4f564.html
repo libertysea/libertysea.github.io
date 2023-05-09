@@ -1,19 +1,16 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>twikoo私有部署 | 王貔貅</title><meta name="keywords" content="Hexo,twikoo,Docker"><meta name="author" content="王貔貅"><meta name="copyright" content="王貔貅"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="twikoo私有部署"><meta name="application-name" content="twikoo私有部署"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><link rel="bookmark" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="192x192" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="512x512" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-startup-image" media="screen and (device-width:320px) and (device-height:568px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_1136x640.png"><link rel="apple-touch-startup-image" media="screen and (device-width:320px) and (device-height:568px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_640x1136.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:3) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2688x1242.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_1792x828.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_1125x2436.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_828x1792.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2436x1125.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:736px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_1242x2208.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:736px) and (-webkit-device-pixel-ratio:3) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2208x1242.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:667px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_1334x750.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:667px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_750x1334.png"><link rel="apple-touch-startup-image" media="screen and (device-width:1024px) and (device-height:1366px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2732x2048.png"><meta name="description" content="前言由于 Vercel 官方域名的 Dns 污染问题，导致 Vercel 部署的 Twikoo 评论无法正常获取数据。在配置 Twikoo 评论时，如果 envId 用了 vercel 自带的域名（类似 https:&#x2F;&#x2F;xxxxx.vercel.app&#x2F;），则会遇到以上问题  解决方案是用自定义的域名去代替 vercel 的域名，可参考关于Vercel被墙导致获取Twikoo评论失败的解决方案 |">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>部署上线 | 王貔貅</title><meta name="author" content="王貔貅"><meta name="copyright" content="王貔貅"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="部署上线"><meta name="application-name" content="部署上线"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><link rel="bookmark" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="192x192" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="512x512" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-startup-image" media="screen and (device-width:320px) and (device-height:568px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_1136x640.png"><link rel="apple-touch-startup-image" media="screen and (device-width:320px) and (device-height:568px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_640x1136.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:3) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2688x1242.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_1792x828.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_1125x2436.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_828x1792.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2436x1125.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:736px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_1242x2208.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:736px) and (-webkit-device-pixel-ratio:3) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2208x1242.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:667px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_1334x750.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:667px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_750x1334.png"><link rel="apple-touch-startup-image" media="screen and (device-width:1024px) and (device-height:1366px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2732x2048.png"><meta name="description" content="多环境什么是多环境    ChatGPT： ​		多环境指在软件开发过程中，为了满足不同的需求和环境，开发人员需要在不同的环境中进行开发、测试和部署。常见的多环境包括开发环境、测试环境、预生产环境和生产环境等。每个环境都有自己的特点和要求，例如开发环境需要更多的调试工具和测试数据，而生产环境需要更高的性能和可靠性。多环境的使用可以保证软件在不同的环境中都能够正常运行，并且可以提高软件开发的效率和质">
 <meta property="og:type" content="article">
-<meta property="og:title" content="twikoo私有部署">
-<meta property="og:url" content="https://blog.wpixiu.cn/posts/3cbdce34.html">
+<meta property="og:title" content="部署上线">
+<meta property="og:url" content="https://blog.wpixiu.cn/posts/98f4f564.html">
 <meta property="og:site_name" content="王貔貅">
-<meta property="og:description" content="前言由于 Vercel 官方域名的 Dns 污染问题，导致 Vercel 部署的 Twikoo 评论无法正常获取数据。在配置 Twikoo 评论时，如果 envId 用了 vercel 自带的域名（类似 https:&#x2F;&#x2F;xxxxx.vercel.app&#x2F;），则会遇到以上问题  解决方案是用自定义的域名去代替 vercel 的域名，可参考关于Vercel被墙导致获取Twikoo评论失败的解决方案 |">
+<meta property="og:description" content="多环境什么是多环境    ChatGPT： ​		多环境指在软件开发过程中，为了满足不同的需求和环境，开发人员需要在不同的环境中进行开发、测试和部署。常见的多环境包括开发环境、测试环境、预生产环境和生产环境等。每个环境都有自己的特点和要求，例如开发环境需要更多的调试工具和测试数据，而生产环境需要更高的性能和可靠性。多环境的使用可以保证软件在不同的环境中都能够正常运行，并且可以提高软件开发的效率和质">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pic.imgdb.cn/item/64409f2c0d2dde5777056f37.jpg">
-<meta property="article:published_time" content="2023-04-22T02:43:22.000Z">
-<meta property="article:modified_time" content="2023-04-22T04:09:28.932Z">
+<meta property="og:image" content="http://s-bj-6242-myfirst.oss.dogecdn.com/wallhaven-7ppxve_2160x3840.jpg">
+<meta property="article:published_time" content="2023-05-08T04:40:07.000Z">
+<meta property="article:modified_time" content="2023-05-09T01:54:17.592Z">
 <meta property="article:author" content="王貔貅">
-<meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="twikoo">
-<meta property="article:tag" content="Docker">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pic.imgdb.cn/item/64409f2c0d2dde5777056f37.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.wpixiu.cn/posts/3cbdce34"><link rel="preconnect" href="//cdn.jsdelivr.net"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="codeva-E82LCFcOiX"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free@6.3.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/@fancyapps/ui@4.0.31/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="http://s-bj-6242-myfirst.oss.dogecdn.com/wallhaven-7ppxve_2160x3840.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.wpixiu.cn/posts/98f4f564"><link rel="preconnect" href="//cdn.jsdelivr.net"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="codeva-E82LCFcOiX"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free@6.3.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/@fancyapps/ui@4.0.31/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   navMusic: true,
   algolia: {"appId":"JNYANDZFQ0","apiKey":"549fe353c3c6b975953f6b86c78e016c","indexName":"LibertySea","hits":{"per_page":6},"languages":{"input_placeholder":"键入后按下回车搜索！","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
@@ -51,12 +48,12 @@
   islazyload: true,
   isAnchor: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'twikoo私有部署',
+  title: '部署上线',
   isPost: true,
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2023-04-22 12:09:28'
+  postUpdate: '2023-05-09 09:54:17'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -179,364 +176,62 @@
       }
     }
     detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 6.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><div class="back-home-button" tabindex="-1"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">博客</div><div class="back-menu-list"><a class="back-menu-item" title="主站" target="_blank"><img class="back-menu-item-icon" src="/picture/quqi.png" alt="主站"/><span class="back-menu-item-text">主站</span></a><a class="back-menu-item" href="https://libertysea.github.io/" title="github线路" target="_blank"><img class="back-menu-item-icon" src="/picture/quqi-.png" alt="github线路"/><span class="back-menu-item-text">github线路</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://wpixiu.cn/" title="主页" target="_blank"><img class="back-menu-item-icon" src="/picture/mbefengge_pijiu.png" alt="主页"/><span class="back-menu-item-text">主页</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" href="https://picture.wpixiu.cn/" title="貔貅图床" target="_blank"><img class="back-menu-item-icon" src="/picture/mbefengge_hanbao.png" alt="貔貅图床"/><span class="back-menu-item-text">貔貅图床</span></a></div></div></div></div><a id="site-name" href="/"><div class="title">王貔貅</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><center id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></center></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-fenlei"></use></svg><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-tag"></use></svg><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/link/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-lianjie"></use></svg><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-shejiaotubiao-38"></use></svg><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-liuyanban"></use></svg><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child" style="left:-127px;"><li><a class="site-page child faa-parent animated-hover" href="/music/?id=8041074139&amp;server=netease"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-yinle"></use></svg><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-xiangce"></use></svg><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/toolbox/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-gongjuxiang"></use></svg><span> 工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" style="display: flex"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><div class="nav-button" id="darkmode_navswitch"><a class="darkmode_switchbutton" type="button" href="javascript:void(0);" title="浅色和深色模式转换" onclick="rm.switchDarkMode()"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke" style="font-size: 1.3rem"></i></a></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">twikoo私有部署</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-04-22T02:43:22.000Z" title="发表于 2023-04-22 10:43:22">2023-04-22</time><span class="post-meta-separator">|</span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-04-22T04:09:28.932Z" title="更新于 2023-04-22 12:09:28">2023-04-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/Hexo/">Hexo</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">502</span><span class="post-meta-separator">|</span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span id="" data-flag-title="twikoo私有部署"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="twikoo_visitors"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://pic.imgdb.cn/item/64409f2c0d2dde5777056f37.jpg"></div></header><main class="layout" id="content-inner"><div id="post"><div class="post-ai-description"><div class="ai-title"><i class="anzhiyufont anzhiyu-icon-bilibili"></i><div class="ai-title-text">AI-摘要</div><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i><div id="ai-tag">PiXiu GPT</div></div><div class="ai-explanation">AI初始化中...</div><div class="ai-btn-box"><div class="ai-btn-item">介绍自己</div><div class="ai-btn-item">生成本文简介</div><div class="ai-btn-item">推荐相关文章</div><div class="ai-btn-item">前往主页</div><div class="ai-btn-item" id="go-tianli-blog">前往tianli博客</div></div><script data-pjax>(function(){
-  // 当前随机到的ai摘要到index
-  let lastAiRandomIndex = -1;
-  let animationRunning = true; // 标志变量，控制动画函数的运行
-  // 当前gpt模式
-  let mode = "local"
-  // 刷新点击次数
-  let refreshNum = 0
-  // 记录上一次传递给aiAbstract的参数
-  let prevParam;
-  const aiTitleRefreshIcon = document.querySelector(".ai-title .anzhiyufont.anzhiyu-icon-arrow-rotate-right")
-  const explanation = document.querySelector(".ai-explanation");
-  const post_ai = document.querySelector(".post-ai-description");
-  let ai_str = "";
-  let ai_str_length = "";
-  let delay_init = 600;
-  let i = 0;
-  let j = 0;
-  let sto = [];
-  let elapsed = 0;
-  const animate = timestamp => {
-    if (!animationRunning) {
-      return; // 动画函数停止运行
-    }
-    if (!animate.start) animate.start = timestamp;
-    elapsed = timestamp - animate.start;
-    if (elapsed >= 20) {
-      animate.start = timestamp;
-      if (i < ai_str_length - 1) {
-        let char = ai_str.charAt(i + 1);
-        let delay = /[,.，。!?！？]/.test(char) ? 150 : 20;
-        if (explanation.firstElementChild) {
-          explanation.removeChild(explanation.firstElementChild);
-        }
-        explanation.innerHTML += char;
-        let div = document.createElement("div");
-        div.className = "ai-cursor";
-        explanation.appendChild(div);
-        i++;
-        if (delay === 150) {
-          document.querySelector(".ai-explanation .ai-cursor").style.opacity = "0";
-        }
-        if (i === ai_str_length - 1) {
-          observer.disconnect(); // 暂停监听
-          explanation.removeChild(explanation.firstElementChild);
-        }
-        sto[0] = setTimeout(() => {
-          requestAnimationFrame(animate);
-        }, delay);
-      }
-    } else {
-      requestAnimationFrame(animate);
-    }
-  };
-  const observer = new IntersectionObserver(
-    entries => {
-      let isVisible = entries[0].isIntersecting;
-      animationRunning = isVisible; // 标志变量更新
-      if (animationRunning) {
-        delay_init = i === 0 ? 200 : 20;
-        sto[1] = setTimeout(() => {
-          if (j) {
-            i = 0;
-            j = 0;
-          }
-          if (i === 0) {
-            explanation.innerHTML = ai_str.charAt(0);
-          }
-          requestAnimationFrame(animate);
-        }, delay_init);
-      }
-    },
-    { threshold: 0 }
-  );
-  function clearSTO() {
-    if (sto.length) {
-      sto.forEach(item => {
-        if (item) {
-          clearTimeout(item);
-        }
-      });
-    }
-  }
-  function startAI(str, df = true) {
-    i = 0; //重置计数器
-    j = 1;
-    clearSTO();
-    animationRunning = false;
-    elapsed = 0;
-    observer.disconnect(); // 暂停上一次监听
-    explanation.innerHTML = df ? "生成中. . ." : "请等待. . .";
-    ai_str = str;
-    ai_str_length = ai_str.length;
-    observer.observe(post_ai); //启动新监听
-  }
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 6.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><div class="back-home-button" tabindex="-1"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">博客</div><div class="back-menu-list"><a class="back-menu-item" title="主站" target="_blank"><img class="back-menu-item-icon" src="/picture/quqi.png" alt="主站"/><span class="back-menu-item-text">主站</span></a><a class="back-menu-item" href="https://libertysea.github.io/" title="github线路" target="_blank"><img class="back-menu-item-icon" src="/picture/quqi-.png" alt="github线路"/><span class="back-menu-item-text">github线路</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://wpixiu.cn/" title="主页" target="_blank"><img class="back-menu-item-icon" src="/picture/mbefengge_pijiu.png" alt="主页"/><span class="back-menu-item-text">主页</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" href="https://picture.wpixiu.cn/" title="貔貅图床" target="_blank"><img class="back-menu-item-icon" src="/picture/mbefengge_hanbao.png" alt="貔貅图床"/><span class="back-menu-item-text">貔貅图床</span></a></div></div></div></div><a id="site-name" href="/"><div class="title">王貔貅</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><center id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></center></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-fenlei"></use></svg><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-tag"></use></svg><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/link/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-lianjie"></use></svg><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-shejiaotubiao-38"></use></svg><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-liuyanban"></use></svg><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child" style="left:-127px;"><li><a class="site-page child faa-parent animated-hover" href="/music/?id=8041074139&amp;server=netease"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-yinle"></use></svg><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-xiangce"></use></svg><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/toolbox/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-gongjuxiang"></use></svg><span> 工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" style="display: flex"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><div class="nav-button" id="darkmode_navswitch"><a class="darkmode_switchbutton" type="button" href="javascript:void(0);" title="浅色和深色模式转换" onclick="rm.switchDarkMode()"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke" style="font-size: 1.3rem"></i></a></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">部署上线</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-05-08T04:40:07.000Z" title="发表于 2023-05-08 12:40:07">2023-05-08</time><span class="post-meta-separator">|</span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-05-09T01:54:17.592Z" title="更新于 2023-05-09 09:54:17">2023-05-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span id="" data-flag-title="部署上线"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="twikoo_visitors"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="http://s-bj-6242-myfirst.oss.dogecdn.com/wallhaven-7ppxve_2160x3840.jpg"></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="多环境"><a href="#多环境" class="headerlink" title="多环境"></a>多环境</h1><div class="note success no-icon flat"><p>什么是多环境</p>
+</div>
 
-  async function aiAbstract(num = 1000) {
-    i = 0; //重置计数器
-    j = 1;
-    clearSTO();
-    animationRunning = false;
-    elapsed = 0;
-    observer.disconnect(); // 暂停上一次监听
-    if (mode === "tianli") {
-      num = Math.max(10, Math.min(2000, num));
-      const options = {
-        key: "xxxx",
-        Referer: "https://xx.xx/"
-      };
-      const truncateDescription = ("twikoo私有部署" + "前言, 部署, 安装Docker, 开始部署, 反向代理, 添加域名解析，申请SSL, 添加站点, 添加SSL, 设置反代前言由于官方域名的污染问题导致部署的评论无法正常获取数据在配置评论时如果用了自带的域名类似则会遇到以上问题解决方案是用自定义的域名去代替的域名可参考关于被墙导致获取评论失败的解决方案唐志远博客进行部署但部署后依旧无法正常获取数据所以决定采用私有部署部署官方文档文档提供两种私有部署方式安装部署部署本站采用腾讯云宝塔进行部署安装在宝塔软件商店中即可直接安装简单易上手开始部署安装后在命令行输入以下命令即可部署完成注意打开安全组端口部署完毕后访问器公网例如查看是否部署成功成功提示信息云函数运行正常请参考完成前端的配置反向代理添加域名解析申请添加站点点击网站添加站点然后输入我们需要的域名选择纯静态添加在证书我的证书点击下载选择腾讯云宝塔面板打开宝塔面板将下载填写到对应位置保存并启用设置反代在宝塔中点击刚才创建的网站点击反向代理添加反向代理添加名称设置链接填写修改配置文件将域名填入中即可完成").trim().substring(0, num)
+<blockquote>
+<p>ChatGPT：</p>
+<p>​		多环境指在软件开发过程中，为了满足不同的需求和环境，开发人员需要在不同的环境中进行开发、测试和部署。常见的多环境包括开发环境、测试环境、预生产环境和生产环境等。每个环境都有自己的特点和要求，例如开发环境需要更多的调试工具和测试数据，而生产环境需要更高的性能和可靠性。多环境的使用可以保证软件在不同的环境中都能够正常运行，并且可以提高软件开发的效率和质量。</p>
+</blockquote>
+<p>简单来说，多环境就是将<strong>同一套项目代码</strong>根据实际情况来调整配置并部署到不同的机器上。</p>
+<div class="note success no-icon flat"><p>为什么需要多环境</p>
+</div>
 
-      const queryParams = `key=${options.key}&content=${truncateDescription}`;
-      const requestOptions = {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Referer: options.Referer
-        },
-      };
-      try {
-        let animationInterval = null
-        if (animationInterval) clearInterval(animationInterval);
-        animationInterval = setInterval(() => {
-          const animationText = "生成中" + ".".repeat(j);
-          explanation.innerHTML = animationText;
-          j = (j % 3) + 1; // 在 1、2、3 之间循环
-        }, 500);
-        const response = await fetch(`https://summary.tianli0.top/?${queryParams}`, requestOptions);
-        const result = await response.json();
-        const summary = result.summary.trim();
-        setTimeout(() => {
-          aiTitleRefreshIcon.style.opacity = "1";
-        }, 300)
-        startAI(summary);
-        clearInterval(animationInterval)
-
-      } catch (error) {
-        console.error(error);
-      }
-    } else {
-      const strArr = "本文介绍了基于 Twikoo 的评论系统的私有部署方式，通过自定义域名进行部署解决了 Vercel 官方域名的 DNS 污染问题。本站采用了腾讯云 + 宝塔linux + Docker 进行部署，成功运行后可以通过公网 IP 访问确认。文章详细介绍了如何添加域名解析、申请 SSL 证书、配置反向代理等步骤，同时提供了相关截图作为示例演示。通过该部署方法，可以让您的网站与访客间留言交流更加顺畅。".split(",").map(item => item.trim()); // 将字符串转换为数组，去除每个字符串前后的空格
-      if (strArr.length !== 1) {
-        let randomIndex = Math.floor(Math.random() * strArr.length); // 随机生成一个索引
-        while (randomIndex === lastAiRandomIndex) { // 如果随机到了上次的索引
-          randomIndex = Math.floor(Math.random() * strArr.length); // 再次随机
-        }
-        lastAiRandomIndex = randomIndex; // 更新上次随机到的索引
-        startAI(strArr[randomIndex]);
-      } else {
-        startAI(strArr[0])
-      }
-      setTimeout(() => {
-        aiTitleRefreshIcon.style.opacity = "1";
-      }, 600)
-    }
-  }
-
-  function aiRecommend() {
-    i = 0; //重置计数器
-    j = 1;
-    clearSTO();
-    animationRunning = false;
-    elapsed = 0;
-    explanation.innerHTML = "生成中. . .";
-    ai_str = "";
-    ai_str_length = "";
-    observer.disconnect(); // 暂停上一次监听
-    sto[2] = setTimeout(() => {
-      explanation.innerHTML = recommendList();
-    }, 600);
-  }
-  function aiGoHome() {
-    startAI("正在前往博客主页...", false);
-    sto[2] = setTimeout(() => {
-      pjax.loadUrl("/");
-    }, 1000);
-  }
-  const ai_btn_item = document.querySelectorAll(".ai-btn-item");
-  function Introduce() {
-    if (mode == "tianli") {
-      startAI("我是文章辅助AI: TianliGPT，点击下方的按钮，让我生成本文简介、推荐相关文章等。")
-    } else {
-      startAI("我是文章辅助AI: PiXiu GPT，点击下方的按钮，让我生成本文简介、推荐相关文章等。")
-    }
-  }
-  function aiTitleRefreshIconClick() {
-    aiTitleRefreshIcon.click()
-  }
-  const aiFunctions = [Introduce, aiTitleRefreshIconClick, aiRecommend, aiGoHome];
-  ai_btn_item.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      aiFunctions[index]();
-    });
-  });
-
-  function recommendList() {
-    let thumbnail = document.querySelectorAll('.relatedPosts-list a');
-    if (!thumbnail.length) {
-      const cardRecentPost = document.querySelector('.card-widget.card-recent-post'); 
-      if (!cardRecentPost) return '';
-
-      thumbnail = cardRecentPost.querySelectorAll('.aside-list-item a');
-
-      let list = '';
-      for (let i = 0; i < thumbnail.length; i++) {
-        const item = thumbnail[i];
-        list += `<div class="ai-recommend-item"><span class="index">${i + 1}：</span><a href="javascript:;" onclick="pjax.loadUrl('${item.href}')" title="${item.title}" data-pjax-state="">${item.title}</a></div>`;
-      }
-      
-      return `很抱歉，无法找到类似的文章，你也可以看看本站最新发布的文章：<br /><div class="ai-recommend">${list}</div>`;
-    }
-
-    let list = '';
-    for (let i = 0; i < thumbnail.length; i++) {
-      const item = thumbnail[i];
-      list += `<div class="ai-recommend-item"><span>推荐${i + 1}：</span><a href="javascript:;" onclick="pjax.loadUrl('${item.href}')" title="${item.title}" data-pjax-state="">${item.title}</a></div>`;
-    }
-
-    return `推荐文章：<br /><div class="ai-recommend">${list}</div>`;
-  }
-
-
-  function changeShowMode() {
-    if (mode === "tianli") {
-      mode = "local";
-      document.getElementById("ai-tag").innerHTML = "PiXiu GPT";
-      aiAbstract(1000);
-    } else {
-      mode = "tianli";
-      document.getElementById("ai-tag").innerHTML = "Tianli GPT";
-
-      const truncateDescription = ("" + "前言, 部署, 安装Docker, 开始部署, 反向代理, 添加域名解析，申请SSL, 添加站点, 添加SSL, 设置反代前言由于官方域名的污染问题导致部署的评论无法正常获取数据在配置评论时如果用了自带的域名类似则会遇到以上问题解决方案是用自定义的域名去代替的域名可参考关于被墙导致获取评论失败的解决方案唐志远博客进行部署但部署后依旧无法正常获取数据所以决定采用私有部署部署官方文档文档提供两种私有部署方式安装部署部署本站采用腾讯云宝塔进行部署安装在宝塔软件商店中即可直接安装简单易上手开始部署安装后在命令行输入以下命令即可部署完成注意打开安全组端口部署完毕后访问器公网例如查看是否部署成功成功提示信息云函数运行正常请参考完成前端的配置反向代理添加域名解析申请添加站点点击网站添加站点然后输入我们需要的域名选择纯静态添加在证书我的证书点击下载选择腾讯云宝塔面板打开宝塔面板将下载填写到对应位置保存并启用设置反代在宝塔中点击刚才创建的网站点击反向代理添加反向代理添加名称设置链接填写修改配置文件将域名填入中即可完成").trim().substring(0, 1000);
-      let value = Math.floor(Math.random() * 3) + 1000;
-      while (value === prevParam || truncateDescription.length - value === prevParam) {
-        value = Math.floor(Math.random() * 3) + 1000;
-      }
-      aiTitleRefreshIcon.style.opacity = "0.2";
-      aiTitleRefreshIcon.style.transitionDuration = "0.3s";
-      aiTitleRefreshIcon.style.transform = "rotate(" + 360 * refreshNum + "deg)";
-      if (truncateDescription.length <= 1000) {
-        let param = truncateDescription.length - Math.floor(Math.random() * 3);
-        while (param === prevParam) {
-          param = truncateDescription.length - Math.floor(Math.random() * 3);
-        }
-        aiAbstract(param);
-        prevParam = param;
-      } else {
-        aiAbstract(value);
-        prevParam = value;
-      }
-      refreshNum++;
-    }
-  }
-
-  //- 监听tag点击事件
-  document.getElementById("ai-tag").addEventListener("click", () => {
-    if (mode === "tianli") {
-      document.querySelectorAll(".ai-btn-item").forEach(item => item.style.display = "none");
-      document.getElementById("go-tianli-blog").style.display = "block";
-      startAI("你好，我是Tianli开发的摘要生成助理TianliGPT，是一个基于GPT-4的生成式AI。我在这里只负责摘要的预生成和显示，你无法与我直接沟通，如果你也需要一个这样的AI摘要接口，可以在下方购买。（暂未开放购买，敬请期待）")
-    } else {
-      document.getElementById("go-tianli-blog").style.display = "none";
-      startAI("你好，我是本站摘要生成助理PiXiu GPT，是一个基于GPT-4的生成式AI。我在这里只负责摘要的预生成和显示，你无法与我直接沟通。")
-    }
-
-  });
-
-  aiTitleRefreshIcon.addEventListener("click", () => {
-    const truncateDescription = ("" + "前言, 部署, 安装Docker, 开始部署, 反向代理, 添加域名解析，申请SSL, 添加站点, 添加SSL, 设置反代前言由于官方域名的污染问题导致部署的评论无法正常获取数据在配置评论时如果用了自带的域名类似则会遇到以上问题解决方案是用自定义的域名去代替的域名可参考关于被墙导致获取评论失败的解决方案唐志远博客进行部署但部署后依旧无法正常获取数据所以决定采用私有部署部署官方文档文档提供两种私有部署方式安装部署部署本站采用腾讯云宝塔进行部署安装在宝塔软件商店中即可直接安装简单易上手开始部署安装后在命令行输入以下命令即可部署完成注意打开安全组端口部署完毕后访问器公网例如查看是否部署成功成功提示信息云函数运行正常请参考完成前端的配置反向代理添加域名解析申请添加站点点击网站添加站点然后输入我们需要的域名选择纯静态添加在证书我的证书点击下载选择腾讯云宝塔面板打开宝塔面板将下载填写到对应位置保存并启用设置反代在宝塔中点击刚才创建的网站点击反向代理添加反向代理添加名称设置链接填写修改配置文件将域名填入中即可完成").trim().substring(0, 1000);
-    let value = Math.floor(Math.random() * 3) + 1000;
-    while (value === prevParam || truncateDescription.length - value === prevParam) {
-      value = Math.floor(Math.random() * 3) + 1000;
-    }
-    aiTitleRefreshIcon.style.opacity = "0.2";
-    aiTitleRefreshIcon.style.transitionDuration = "0.3s";
-    aiTitleRefreshIcon.style.transform = "rotate(" + 360 * refreshNum + "deg)";
-    if (truncateDescription.length <= 1000) {
-      let param = truncateDescription.length - Math.floor(Math.random() * 3);
-      while (param === prevParam) {
-        param = truncateDescription.length - Math.floor(Math.random() * 3);
-      }
-      aiAbstract(param);
-      prevParam = param;
-    } else {
-      aiAbstract(value);
-      prevParam = value;
-    }
-    showAiBtn();
-    refreshNum++;
-  });
-
-  document.getElementById("go-tianli-blog").addEventListener("click", () => {
-    window.open("https://afdian.net/item/886a79d4db6711eda42a52540025c377", "_blank");
-  });
-  
-  if (false) {
-    document.getElementById("ai-Toggle").addEventListener("click", () => {
-      changeShowMode()
-    });
-  }
-
-  function showAiBtn() {
-    document.querySelectorAll(".ai-btn-item").forEach(item => {
-      if (item.id !== "go-tianli-blog") {
-        item.style.display = "block";
-      }
-      if (item.id === "go-tianli-blog") {
-        item.style.display = "none";
-      }
-    });
-  }
-
-
-  aiAbstract();
-  showAiBtn()
-})()</script></div><article class="post-content" id="article-container"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于 Vercel 官方域名的 Dns 污染问题，导致 Vercel 部署的 Twikoo 评论无法正常获取数据。在配置 Twikoo 评论时，如果 envId 用了 vercel 自带的域名（类似 <a target="_blank" rel="noopener" href="https://xxxxx.vercel.app/%EF%BC%89%EF%BC%8C%E5%88%99%E4%BC%9A%E9%81%87%E5%88%B0%E4%BB%A5%E4%B8%8A%E9%97%AE%E9%A2%98">https://xxxxx.vercel.app/），则会遇到以上问题</a></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picture.wpixiu.cn/UU69O8.png" alt="image-20230422105124467"></p>
-<p>解决方案是用自定义的域名去代替 vercel 的域名，可参考<a target="_blank" rel="noopener" href="https://tzy1997.com/articles/hexo1614/">关于Vercel被墙导致获取Twikoo评论失败的解决方案 | 唐志远の博客 (tzy1997.com)</a>、<a target="_blank" rel="noopener" href="https://vercel.com/docs/concepts/projects/domains#dns-records">Domains Overview | Vercel Docs</a>进行部署。</p>
-<p>但部署后依旧无法正常获取数据，所以决定采用私有部署。</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picture.wpixiu.cn/mji1E3.png" alt="image-20230422104808385"></p>
-<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><p>官方文档：<a target="_blank" rel="noopener" href="https://twikoo.js.org/">Twikoo 文档</a></p>
-<p>Twikoo提供两种私有部署方式：</p>
+<blockquote>
+<p>ChatGPT：</p>
 <ol>
-<li>安装部署</li>
-<li>Docker部署</li>
+<li>避免影响正式环境：在开发和测试过程中，可能会进行一些危险和不稳定的操作，如果在正式环境中进行，可能会对业务造成不可预估的损失。使用多环境可以避免这种情况的发生，开发人员可以在独立的环境中进行实验和测试，不会影响到正式环境。</li>
+<li>确保软件的质量：在不同的环境中进行测试可以发现更多的问题和漏洞，从而提高软件的质量和稳定性。例如，在开发环境中可能会发现代码的逻辑错误，在测试环境中可能会发现性能问题，在预生产环境中可以模拟正式环境中的流量和压力，从而更好地评估软件的可靠性。</li>
+<li>提高开发效率：使用多环境可以使开发人员专注于自己的任务，不会受到其它团队的影响。同时，多环境也可以提供更好的协作和沟通机制，使团队成员可以共同协作完成任务。</li>
+<li>适应不同的需求和环境：不同的环境有不同的要求和特点，例如开发环境需要更多的调试工具和测试数据，而生产环境需要更高的性能和可靠性。使用多环境可以满足不同的需求和环境，从而更好地适应不同的场景。</li>
 </ol>
-<p>本站采用 <code>腾讯云 + 宝塔linux + Docker</code>进行部署</p>
-<h2 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h2><p>在宝塔软件商店中即可直接安装，简单易上手</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picture.wpixiu.cn/lHJZc4.png" alt="image-20230422110457934"></p>
-<h2 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a>开始部署</h2><p>安装Docker后，在命令行输入以下命令即可部署完成。</p>
-<p><strong>注意：打开安全组8080端口</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name twikoo -e TWIKOO_THROTTLE=1000 -p 8080:8080 -v $&#123;PWD&#125;/data:/app/data -d imaegoo/twikoo</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>总结：</p>
+<ol>
+<li>每个环境互不影响，防止开发、测试中危险操作影响正式业务</li>
+<li>区分不同的阶段（不同的环境有不同的要求和特点）：开发 &#x2F; 测试 &#x2F; 开发</li>
+<li>对项目进行优化<ul>
+<li>本地日记级别</li>
+<li>精简依赖，节省项目体积</li>
+<li>项目环境 &#x2F; 参数的调整，如<code>JVM</code>参数</li>
+</ul>
+</li>
+</ol>
+<div class="note success no-icon flat"><p>多环境的分类</p>
+</div>
 
-<p>部署完毕后访问器公网IP:8080，例如：<code>xxx.xxx.xxx.xxx:8080</code>，查看是否部署成功。</p>
-<p>成功提示信息：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;code&quot;</span><span class="punctuation">:</span><span class="number">100</span><span class="punctuation">,</span><span class="attr">&quot;message&quot;</span><span class="punctuation">:</span><span class="string">&quot;Twikoo 云函数运行正常，请参考 https://twikoo.js.org/quick-start.html#%E5%89%8D%E7%AB%AF%E9%83%A8%E7%BD%B2 完成前端的配置&quot;</span><span class="punctuation">,</span><span class="attr">&quot;version&quot;</span><span class="punctuation">:</span><span class="string">&quot;1.6.16&quot;</span><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><h2 id="添加域名解析，申请SSL"><a href="#添加域名解析，申请SSL" class="headerlink" title="添加域名解析，申请SSL"></a>添加域名解析，申请SSL</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picture.wpixiu.cn/4tmxBz.png" alt="image-20230422112807658"></p>
-<h2 id="添加站点"><a href="#添加站点" class="headerlink" title="添加站点"></a>添加站点</h2><p>点击「网站」，「添加站点」</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picture.wpixiu.cn/MuAVvU.png" alt="image-20230422113209383"></p>
-<p>然后输入我们需要的域名，选择纯静态。</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picture.wpixiu.cn/vvxelb.png" alt="image-20230422113129490"></p>
-<h2 id="添加SSL"><a href="#添加SSL" class="headerlink" title="添加SSL"></a>添加SSL</h2><p>在「SSL证书，「我的证书，点击「下载」</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picture.wpixiu.cn/DVw3gm.png" alt="image-20230422113547078"></p>
-<p>选择「腾讯云宝塔面板」</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picture.wpixiu.cn/U5AeIY.png" alt="image-20230422113625427"></p>
-<p>打开宝塔面板</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picture.wpixiu.cn/akv7Gw.png" alt="image-20230422113449492"></p>
-<p>将下载<code>key</code>、<code>pem</code>填写到对应位置，保存并启用。</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picture.wpixiu.cn/IieiZ2.png" alt="image-20230422113817244"></p>
-<h2 id="设置反代"><a href="#设置反代" class="headerlink" title="设置反代"></a>设置反代</h2><p>在宝塔中，点击刚才创建的网站，点击反向代理，「添加反向代理」</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picture.wpixiu.cn/qclWEI.png" alt="image-20230422114244972"></p>
-<p>添加名称、设置链接，填写<code>http://127.0.0.1:8080</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picture.wpixiu.cn/wqef6k.png" alt="image-20230422114556800"></p>
-<p>修改配置文件，将域名填入<code>envId</code>中即可，完成。</p>
-</article><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://picture.wpixiu.cn/jcjEUD.png" target="_blank"><img class="post-qr-code-img" src="https://picture.wpixiu.cn/jcjEUD.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://picture.wpixiu.cn/ebLGA9.png" target="_blank"><img class="post-qr-code-img" src="https://picture.wpixiu.cn/ebLGA9.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul><a class="reward-main-btn" href="/about/" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div class="reward-link mode"><a class="reward-link-button" href="/wechat/" data-pjax-state=""><i class="anzhiyufont anzhiyu-icon-plant-fill"></i>运营模式与责任</a></div><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://blog.wpixiu.cn/posts/3cbdce34.html"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=twikoo私有部署&amp;url=https://blog.wpixiu.cn/posts/3cbdce34.html&amp;pic=https://pic.imgdb.cn/item/64409f2c0d2dde5777056f37.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="rm.copyPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Hexo/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Hexo<span class="tagsPageCount">5</span></a><a class="post-meta__box__tags" href="/tags/twikoo/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>twikoo<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/Docker/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Docker<span class="tagsPageCount">1</span></a></div></div></div></div></div><div class="post-copyright"><i class="anzhiyufont anzhiyu-icon-copyright"></i><div class="post-copyright__author"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://blog.wpixiu.cn/posts/3cbdce34.html">原创</a><a class="post-copyright-title"><span>twikoo私有部署</span></a></div><div class="post-copyright-info-box"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"></span><a class="link" href="https://blog.wpixiu.cn">王貔貅</a></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a class="link" href="https://blog.wpixiu.cn/posts/3cbdce34.html">https://blog.wpixiu.cn/posts/3cbdce34.html</a></span><span class="copy-button" onclick="rm.copyPageUrl()"><i class="anzhiyufont anzhiyu-icon-copy"></i></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.wpixiu.cn" target="_blank">王貔貅</a>！</span></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/629787b4.html"><img class="prev-cover" src="https://pic.imgdb.cn/item/64409f2e0d2dde57770570f0.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hexo生成永久链接</div></div></a></div><div class="next-post pull-right"><a href="/posts/undefined.html"><img class="next-cover" src="https://pic2.imgdb.cn/item/64409f2e0d2dde577705716e.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hexo 博客提交百度、Bing、谷歌搜索引擎收录</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/9f5c66d2.html" title="Hexo安装及服务器部署腾讯云"><img class="cover" src="https://pic.imgdb.cn/item/6440a1200d2dde577707aa5c.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-04-20</div><div class="title">Hexo安装及服务器部署腾讯云</div></div></a></div><div><a href="/posts/629787b4.html" title="Hexo生成永久链接"><img class="cover" src="https://pic.imgdb.cn/item/64409f2e0d2dde57770570f0.webp" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-04-20</div><div class="title">Hexo生成永久链接</div></div></a></div><div><a href="/posts/undefined.html" title="Hexo 博客提交百度、Bing、谷歌搜索引擎收录"><img class="cover" src="https://pic2.imgdb.cn/item/64409f2e0d2dde577705716e.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-05-04</div><div class="title">Hexo 博客提交百度、Bing、谷歌搜索引擎收录</div></div></a></div><div><a href="/posts/c03ae513.html" title="Typora+PicGo+Lsky Pro搭建写作环境"><img class="cover" src="https://picture.wpixiu.cn/koeHkV.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-04-02</div><div class="title">Typora+PicGo+Lsky Pro搭建写作环境</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a></div><div class="comment-tips" id="comment-tips"><span>你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div><div class="comment-barrage"></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="author-info-top"> <div class="card-info-avatar"><div class="author-status-box"><div class="author-status"><g-emoji class="g-emoji" alias="writing_hand" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/270d.png">✍️</g-emoji><span>on Studying</span></div></div></div></div><div class="author-info__sayhi" id="author-info__sayhi"></div><h1 class="author-info__name">王貔貅</h1><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="banner-button-group"><a class="banner-button" onclick="pjax.loadUrl(&quot;/about/&quot;)"><span class="banner-button-text">了解更多</span><i class="anzhiyufont anzhiyu-icon-arrow-circle-right" style="font-size: 1.5rem"></i></a></div><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/libertysea" target="_blank" title="Github"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-GitHub"></use></svg></a><a class="social-icon faa-parent animated-hover" href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=1378600591@qq.com" target="_blank" title="Email"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-youxiang"></use></svg></a><a class="social-icon faa-parent animated-hover" href="tencent://Message/?Uin=1378600591&amp;amp;websiteName=local.edu.com:8888=&amp;amp;Menu=yes" target="_blank" title="QQ"><i class="anzhiyufont anzhiyu-icon-qq"></i></a></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://img02.anzhiy.cn/adminuploads/1/2022/09/11/631ddb7c9b250.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://img02.anzhiy.cn/adminuploads/1/2022/09/11/631ddeb0900b7.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2"><span class="toc-number">2.</span> <span class="toc-text">部署</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Docker"><span class="toc-number">2.1.</span> <span class="toc-text">安装Docker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2"><span class="toc-number">2.2.</span> <span class="toc-text">开始部署</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">反向代理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%EF%BC%8C%E7%94%B3%E8%AF%B7SSL"><span class="toc-number">3.1.</span> <span class="toc-text">添加域名解析，申请SSL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%AB%99%E7%82%B9"><span class="toc-number">3.2.</span> <span class="toc-text">添加站点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0SSL"><span class="toc-number">3.3.</span> <span class="toc-text">添加SSL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%8F%8D%E4%BB%A3"><span class="toc-number">3.4.</span> <span class="toc-text">设置反代</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/a9104ae7.html" title="存储器"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://image-1307011567.cos.ap-shanghai.myqcloud.com/img/202305052344558.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="存储器"/></a><div class="content"><a class="title" href="/posts/a9104ae7.html" title="存储器">存储器</a><time datetime="2023-05-08T06:06:38.000Z" title="发表于 2023-05-08 14:06:38">2023-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/98f4f564.html" title="部署上线"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://s-bj-6242-myfirst.oss.dogecdn.com/wallhaven-7ppxve_2160x3840.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部署上线"/></a><div class="content"><a class="title" href="/posts/98f4f564.html" title="部署上线">部署上线</a><time datetime="2023-05-08T04:40:07.000Z" title="发表于 2023-05-08 12:40:07">2023-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1decec4.html" title="数据结构与算法——查找"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构与算法——查找"/></a><div class="content"><a class="title" href="/posts/1decec4.html" title="数据结构与算法——查找">数据结构与算法——查找</a><time datetime="2023-05-06T15:56:51.000Z" title="发表于 2023-05-06 23:56:51">2023-05-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/undefined.html" title="Hexo 博客提交百度、Bing、谷歌搜索引擎收录"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic2.imgdb.cn/item/64409f2e0d2dde577705716e.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo 博客提交百度、Bing、谷歌搜索引擎收录"/></a><div class="content"><a class="title" href="/posts/undefined.html" title="Hexo 博客提交百度、Bing、谷歌搜索引擎收录">Hexo 博客提交百度、Bing、谷歌搜索引擎收录</a><time datetime="2023-05-04T01:22:16.000Z" title="发表于 2023-05-04 09:22:16">2023-05-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3cbdce34.html" title="twikoo私有部署"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/64409f2c0d2dde5777056f37.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="twikoo私有部署"/></a><div class="content"><a class="title" href="/posts/3cbdce34.html" title="twikoo私有部署">twikoo私有部署</a><time datetime="2023-04-22T02:43:22.000Z" title="发表于 2023-04-22 10:43:22">2023-04-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By 王貔貅</div><div id="workboard"><img class="workSituationImg boardsign" src="/picture/moyu.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://anzhiy.cn/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pan.anzhiy.cn/d/anzhiyu/svg/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://www.dogecloud.com/" style="margin-inline:5px" data-title="本站使用多吉云为静态资源提供CDN加速" title="本站使用多吉云为静态资源提供CDN加速"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg" alt="本站使用多吉云为静态资源提供CDN加速"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div></footer><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://picture.wpixiu.cn/dx0nkL.jpg"/><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script>const loadingPercentage = document.getElementById("loading-percentage");
+<blockquote>
+<p>ChatGPT：</p>
+<p>多环境可以按照不同的分类方式进行划分，以下是常见的多环境分类方式：</p>
+<ol>
+<li>按照使用者划分：可以将多环境划分为开发环境、测试环境、预生产环境和生产环境等。</li>
+<li>按照部署方式划分：可以将多环境划分为本地环境、云环境、虚拟化环境和容器化环境等。</li>
+<li>按照操作系统划分：可以将多环境划分为Windows环境、Linux环境、Mac环境等。</li>
+<li>按照网络划分：可以将多环境划分为内网环境、外网环境、测试网络环境等。</li>
+<li>按照应用程序划分：可以将多环境划分为Web应用程序环境、移动应用程序环境、桌面应用程序环境等。</li>
+<li>按照数据源划分：可以将多环境划分为开发数据库环境、测试数据库环境、生产数据库环境等。</li>
+</ol>
+<p>不同的多环境分类方式可以满足不同的需求和场景，开发人员可以根据实际情况选择适合自己的多环境分类方式。</p>
+</blockquote>
+<ol>
+<li>本地环境，通常是自己的电脑，localhost（127.0.0.1）。</li>
+<li>开发环境（远程开发），大家同连一台机器</li>
+<li>测试环境（测试） 开发 &#x2F; 测试 &#x2F; 产品，单元测试 &#x2F; 性能测试 &#x2F; 功能测试 &#x2F; 系统集成测试，独立的数据库、独立的服务器</li>
+<li>预发布环境（体验服）：和正式环境一致，正式环境数据库，寻找更多问题</li>
+<li>正式环境（线上，公开对外访问的项目）：尽量不要改动，保证上线前的代码“完美”运行。</li>
+<li>沙箱环境（实验环境，测试环境的一种）：为验证某功能，一个完全隔离的环境</li>
+</ol>
+</article><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://picture.wpixiu.cn/jcjEUD.png" target="_blank"><img class="post-qr-code-img" src="https://picture.wpixiu.cn/jcjEUD.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://picture.wpixiu.cn/ebLGA9.png" target="_blank"><img class="post-qr-code-img" src="https://picture.wpixiu.cn/ebLGA9.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul><a class="reward-main-btn" href="/about/" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div class="reward-link mode"><a class="reward-link-button" href="/wechat/" data-pjax-state=""><i class="anzhiyufont anzhiyu-icon-plant-fill"></i>运营模式与责任</a></div><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://blog.wpixiu.cn/posts/98f4f564.html"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=部署上线&amp;url=https://blog.wpixiu.cn/posts/98f4f564.html&amp;pic=http://s-bj-6242-myfirst.oss.dogecdn.com/wallhaven-7ppxve_2160x3840.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="rm.copyPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"></div></div></div></div></div><div class="post-copyright"><i class="anzhiyufont anzhiyu-icon-copyright"></i><div class="post-copyright__author"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://blog.wpixiu.cn/posts/98f4f564.html">原创</a><a class="post-copyright-title"><span>部署上线</span></a></div><div class="post-copyright-info-box"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"></span><a class="link" href="https://blog.wpixiu.cn">王貔貅</a></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a class="link" href="https://blog.wpixiu.cn/posts/98f4f564.html">https://blog.wpixiu.cn/posts/98f4f564.html</a></span><span class="copy-button" onclick="rm.copyPageUrl()"><i class="anzhiyufont anzhiyu-icon-copy"></i></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.wpixiu.cn" target="_blank">王貔貅</a>！</span></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/1decec4.html"><img class="prev-cover" src="/img/default_cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">数据结构与算法——查找</div></div></a></div><div class="next-post pull-right"><a href="/posts/a9104ae7.html"><img class="next-cover" src="https://image-1307011567.cos.ap-shanghai.myqcloud.com/img/202305052344558.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">存储器</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a></div><div class="comment-tips" id="comment-tips"><span>你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div><div class="comment-barrage"></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="author-info-top"> <div class="card-info-avatar"><div class="author-status-box"><div class="author-status"><g-emoji class="g-emoji" alias="writing_hand" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/270d.png">✍️</g-emoji><span>on Studying</span></div></div></div></div><div class="author-info__sayhi" id="author-info__sayhi"></div><h1 class="author-info__name">王貔貅</h1><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="banner-button-group"><a class="banner-button" onclick="pjax.loadUrl(&quot;/about/&quot;)"><span class="banner-button-text">了解更多</span><i class="anzhiyufont anzhiyu-icon-arrow-circle-right" style="font-size: 1.5rem"></i></a></div><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/libertysea" target="_blank" title="Github"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-GitHub"></use></svg></a><a class="social-icon faa-parent animated-hover" href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=1378600591@qq.com" target="_blank" title="Email"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-youxiang"></use></svg></a><a class="social-icon faa-parent animated-hover" href="tencent://Message/?Uin=1378600591&amp;amp;websiteName=local.edu.com:8888=&amp;amp;Menu=yes" target="_blank" title="QQ"><i class="anzhiyufont anzhiyu-icon-qq"></i></a></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://img02.anzhiy.cn/adminuploads/1/2022/09/11/631ddb7c9b250.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://img02.anzhiy.cn/adminuploads/1/2022/09/11/631ddeb0900b7.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E7%8E%AF%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">多环境</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/a9104ae7.html" title="存储器"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://image-1307011567.cos.ap-shanghai.myqcloud.com/img/202305052344558.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="存储器"/></a><div class="content"><a class="title" href="/posts/a9104ae7.html" title="存储器">存储器</a><time datetime="2023-05-08T06:06:38.000Z" title="发表于 2023-05-08 14:06:38">2023-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/98f4f564.html" title="部署上线"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://s-bj-6242-myfirst.oss.dogecdn.com/wallhaven-7ppxve_2160x3840.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部署上线"/></a><div class="content"><a class="title" href="/posts/98f4f564.html" title="部署上线">部署上线</a><time datetime="2023-05-08T04:40:07.000Z" title="发表于 2023-05-08 12:40:07">2023-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1decec4.html" title="数据结构与算法——查找"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构与算法——查找"/></a><div class="content"><a class="title" href="/posts/1decec4.html" title="数据结构与算法——查找">数据结构与算法——查找</a><time datetime="2023-05-06T15:56:51.000Z" title="发表于 2023-05-06 23:56:51">2023-05-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/undefined.html" title="Hexo 博客提交百度、Bing、谷歌搜索引擎收录"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic2.imgdb.cn/item/64409f2e0d2dde577705716e.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo 博客提交百度、Bing、谷歌搜索引擎收录"/></a><div class="content"><a class="title" href="/posts/undefined.html" title="Hexo 博客提交百度、Bing、谷歌搜索引擎收录">Hexo 博客提交百度、Bing、谷歌搜索引擎收录</a><time datetime="2023-05-04T01:22:16.000Z" title="发表于 2023-05-04 09:22:16">2023-05-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3cbdce34.html" title="twikoo私有部署"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/64409f2c0d2dde5777056f37.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="twikoo私有部署"/></a><div class="content"><a class="title" href="/posts/3cbdce34.html" title="twikoo私有部署">twikoo私有部署</a><time datetime="2023-04-22T02:43:22.000Z" title="发表于 2023-04-22 10:43:22">2023-04-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By 王貔貅</div><div id="workboard"><img class="workSituationImg boardsign" src="/picture/moyu.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://anzhiy.cn/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pan.anzhiy.cn/d/anzhiyu/svg/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://www.dogecloud.com/" style="margin-inline:5px" data-title="本站使用多吉云为静态资源提供CDN加速" title="本站使用多吉云为静态资源提供CDN加速"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg" alt="本站使用多吉云为静态资源提供CDN加速"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div></footer><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://picture.wpixiu.cn/dx0nkL.jpg"/><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script>const loadingPercentage = document.getElementById("loading-percentage");
 let loadingPercentageTimer = setInterval(function() {
   var progressBar = document.querySelector(".pace-progress");
   if (!progressBar) return

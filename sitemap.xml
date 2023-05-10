@@ -227,13 +227,6 @@
 
   
   <url>
-    <loc>https://blog.wpixiu.cn/tags/%E8%81%9A%E5%90%88%E6%90%9C%E7%B4%A2/</loc>
-    <lastmod>2023-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.wpixiu.cn/tags/Hexo/</loc>
     <lastmod>2023-05-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -248,14 +241,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wpixiu.cn/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2023-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.wpixiu.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</loc>
+    <loc>https://blog.wpixiu.cn/tags/%E8%81%9A%E5%90%88%E6%90%9C%E7%B4%A2/</loc>
     <lastmod>2023-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -311,6 +297,20 @@
   </url>
   
   <url>
+    <loc>https://blog.wpixiu.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2023-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.wpixiu.cn/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2023-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.wpixiu.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2023-05-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -334,13 +334,6 @@
 
   
   <url>
-    <loc>https://blog.wpixiu.cn/categories/%E9%A1%B9%E7%9B%AE/</loc>
-    <lastmod>2023-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.wpixiu.cn/categories/Hexo/</loc>
     <lastmod>2023-05-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -348,7 +341,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wpixiu.cn/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://blog.wpixiu.cn/categories/%E9%A1%B9%E7%9B%AE/</loc>
     <lastmod>2023-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -356,6 +349,13 @@
   
   <url>
     <loc>https://blog.wpixiu.cn/categories/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2023-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.wpixiu.cn/categories/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2023-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

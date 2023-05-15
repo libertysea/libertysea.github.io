@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wpixiu.cn/manifest.json</loc>
+    
+    <lastmod>2023-05-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wpixiu.cn/posts/83d084ac.html</loc>
     
     <lastmod>2023-05-15</lastmod>
@@ -284,41 +293,6 @@
   </url>
   
   <url>
-    <loc>https://wpixiu.cn/tags/Typora/</loc>
-    <lastmod>2023-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wpixiu.cn/tags/PicGo/</loc>
-    <lastmod>2023-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wpixiu.cn/tags/Lsky-Pro/</loc>
-    <lastmod>2023-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wpixiu.cn/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2023-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wpixiu.cn/tags/%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2023-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://wpixiu.cn/tags/twikoo/</loc>
     <lastmod>2023-05-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -367,6 +341,41 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://wpixiu.cn/tags/Typora/</loc>
+    <lastmod>2023-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wpixiu.cn/tags/PicGo/</loc>
+    <lastmod>2023-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wpixiu.cn/tags/Lsky-Pro/</loc>
+    <lastmod>2023-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wpixiu.cn/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2023-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wpixiu.cn/tags/%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2023-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -377,14 +386,14 @@
   </url>
   
   <url>
-    <loc>https://wpixiu.cn/categories/%E9%A1%B9%E7%9B%AE/</loc>
+    <loc>https://wpixiu.cn/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2023-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://wpixiu.cn/categories/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://wpixiu.cn/categories/%E9%A1%B9%E7%9B%AE/</loc>
     <lastmod>2023-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
